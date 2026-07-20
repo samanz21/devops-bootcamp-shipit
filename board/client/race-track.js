@@ -64,7 +64,7 @@ export function createRaceTrack(container, { me = null } = {}) {
   }
 
   function bannerText(phase, ships) {
-    if (phase === 'idle') return ships.length ? 'WAITING FOR LAUNCH…' : 'NO RACERS YET — open your ship's READY link';
+    if (phase === 'idle') return ships.length ? 'WAITING FOR LAUNCH…' : 'NO RACERS YET — open your ship’s READY link';
     if (phase === 'finished') {
       const podium = ships.filter((s) => s.finishedAt != null)
         .sort((a, b) => a.finishedAt - b.finishedAt).slice(0, 3)
